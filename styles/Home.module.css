@@ -31,6 +31,7 @@
 .title a {
   color: #0070f3;
   text-decoration: none;
+  font-family: "Roboto Mono", monospace;
 }
 
 .title a:hover,

@@ -1,5 +1,4 @@
 import Head from 'next/head'
-import Image from 'next/image'
 import Link from 'next/link'
 import styles from '../styles/Home.module.css'
 
@@ -16,8 +15,9 @@ export default function Home() {
         <h1 className={styles.title}>
           Adam Bowman
         </h1>
+        <p className="text-sm font-mono">developer</p>
         <Link href="/resume">
-          <a>
+          <a className="mt-6">
         <h3 className={styles.code}>
           GET /resume
         </h3>
