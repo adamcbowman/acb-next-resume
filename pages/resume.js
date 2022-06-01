@@ -32,9 +32,9 @@ const Resume = () => {
 
             <div className="row p-8 border">
               <div className="col-md-12">
-                <h1 className="text-xl font-semibold">{resume.basics.name}</h1>
+                <h1 className="text-3xl font-bold">{resume.basics.name}</h1>
                 <p>
-                  <a href={resume.basics.email}>{resume.basics.email}</a>
+                  <p>{resume.basics.email}</p>
                 </p>
               </div>
             </div>
