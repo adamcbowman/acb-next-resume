@@ -1,5 +1,12 @@
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
+The purpose of this resume is to demonstrate the use of the JSON Resume format to create a resume file, build an API to serve it, and a layout to display it.
+The resume is created using the JSON Resume Schema. 
+
+The data for this resume lives in a GitHub gist file.
+
+
+
 ## Getting Started
 
 First, run the development server:
