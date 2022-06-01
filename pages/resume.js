@@ -47,7 +47,8 @@ const Resume = () => {
                   <h1 className="text-5xl font-bold">{resume.basics.name}</h1>
 
                   <h2 className="py-2">{resume.basics.email}</h2>
-                  <p className="pt-4 font-semibold">{resume.basics.summary}</p>
+                  <p className="pt-4 font-semibold">{resume.basics.label}</p>
+                  <p className="pt-4 text-left text-xs">{resume.basics.summary}</p>
                   <Link href="/contact">
                     <button className="btn btn-primary mt-6">Contact</button>
                   </Link>
