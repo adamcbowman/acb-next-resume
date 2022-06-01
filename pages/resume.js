@@ -115,11 +115,16 @@ const Resume = () => {
               </div>
             </div>
 
-            <div className="bg-base-200 shadow overflow-hidden sm:rounded-lg w-screen flex flex-row justify-items-center ">
-    
-              <div className="stats shadow min-h-16 md:p-6 my-6 w-full md:m-24 md:text-center">
+            <div className="bg-base-200 shadow overflow-hidden sm:rounded-lg w-screen flex flex-col items-center">
+              <div className="mt-3 text-center">
+                <h3 className="text-lg leading-6 font-semibold text-gray-900">
+                  Skills
+                </h3>
+              </div>
+
+              <div className="stats shadow min-h-16 md:p-6 my-6 w-full md:mx-24 md:text-center">
                 {resume.skills.map((skill, index) => (
-                  <div className="stat" key="index">
+                  <div className="stat" key={index}>
                     <div className="stat-title md:p-3 font-semibold md:text-lg">
                       {skill.name}
                     </div>
