@@ -138,13 +138,41 @@ const Resume = () => {
               </div>
             </div>
 
-            <div className="row pt-6 border">
+            <div className="flex flex-col w-full border-opacity-50">
+              <div className="m-6 text-center">
+                <h3 className="text-lg leading-6 font-semibold text-gray-900">
+                  Volunteer Experience
+                </h3>
+              </div>
+              {resume.volunteer.map((volunteer, index) => (
+                <>
+                <div
+                  className="grid card bg-base-200 rounded-box place-items-center p-12 mx-12"
+                  key={index}
+                >
+                  <h3 className="font-semibold">
+                    {volunteer.organization}
+                  </h3>
+                  <p>{volunteer.position}</p>
+                  <p>
+                    {volunteer.startDate} - {volunteer.endDate}
+                  </p>
+                  <p>{volunteer.summary}</p>
+                </div>
+                <div className="divider"></div>
+                </>
+              ))}
+
+            
+            </div>
+
+            {/* <div className="row p-6 border">
               <div className="col-md-12">
                 <h2 className="text-xl font-semibold underline">
                   Volunteer Experience
                 </h2>
                 {resume.volunteer.map((volunteer, index) => (
-                  <div key={index} className="p-4">
+                  <div key={index} className="p-6">
                     <h3 className="text-xl font-semibold">
                       {volunteer.organization}
                     </h3>
@@ -156,7 +184,7 @@ const Resume = () => {
                   </div>
                 ))}
               </div>
-            </div>
+            </div> */}
           </>
         )}
       </div>
