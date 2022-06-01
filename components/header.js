@@ -18,7 +18,7 @@ const navLinks = [
 
 const header = () => {
   return (
-    <header className="w-screen flex flex-col items-center border-b-2">
+    <header className="w-screen flex flex-col items-center border-b-2 overflow-hidden">
       {/* navbar */}
       <div className="navbar">
         {/* desktop */}
