@@ -21,9 +21,16 @@ const Resume = () => {
     <div>
       <Header />
       <div className="text-center">
+        {!resume && (
+          <div className="m-12">
+             <h1>Loading...</h1>
+          </div>
+        )}
+        
         {resume && (
           <>
-            <div className="row p-12 border">
+
+            <div className="row p-8 border">
               <div className="col-md-12">
                 <h1 className="text-xl font-semibold">{resume.basics.name}</h1>
                 <p>
@@ -31,15 +38,15 @@ const Resume = () => {
                 </p>
               </div>
             </div>
-            <div className="row border">
+            <div className="row p-6 border">
               <div className="col-md-12">
-                <h2 className="text-xl font-semibold">Summary</h2>
                 <p>{resume.basics.summary}</p>
               </div>
             </div>
+
             <div className="row pt-6 border">
               <div className="col-md-12">
-                <h2 className="text-xl font-semibold">Work Experience</h2>
+                <h2 className="text-xl font-semibold underline">Work Experience</h2>
                 {resume.work.map((work, index) => (
                   <div key={index} className="p-4">
                     <h3 className="text-xl font-semibold">{work.company}</h3>
@@ -52,21 +59,10 @@ const Resume = () => {
                 ))}
               </div>
             </div>
-            {/* <div className="row pt-6 border">
-              <div className="col-md-12">
-                <h2 className="text-xl font-semibold">Education</h2>
-                {resume.education.map((edu, index) => (
-                  <div key={index} className="p-4">
-                    <h3 className="text-xl font-semibold">{edu.institution}</h3>
-                    <p>{edu.area}</p>
-                    <p>{edu.startDate} - {edu.endDate}</p>
-                  </div>
-                ))}
-              </div>
-            </div> */}
+        
             <div className="row pt-6 border">
               <div className="col-md-12">
-                <h2 className="text-xl font-semibold">Skills</h2>
+                <h2 className="text-xl font-semibold underline">Skills</h2>
                 {resume.skills.map((skill, index) => (
                   <div key={index} className="p-4">
                     <h3 className="text-xl font-semibold">{skill.name}</h3>
@@ -74,6 +70,22 @@ const Resume = () => {
                     {skill.keywords.map((keyword, index) => (
                       <p key={index}>{keyword}</p>
                     ))}
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            <div className="row pt-6 border">
+              <div className="col-md-12">
+                <h2 className="text-xl font-semibold underline">Volunteer Experience</h2>
+                {resume.volunteer.map((volunteer, index) => (
+                  <div key={index} className="p-4">
+                    <h3 className="text-xl font-semibold">{volunteer.organization}</h3>
+                    <p>{volunteer.position}</p>
+                    <p>
+                      {volunteer.startDate} - {volunteer.endDate}
+                    </p>
+                    <p>{volunteer.summary}</p>
                   </div>
                 ))}
               </div>

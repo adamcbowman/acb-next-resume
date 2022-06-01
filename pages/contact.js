@@ -6,7 +6,9 @@ const contact = () => {
   return (
       <div>
           <Header />
-    <div className="">contact form</div>
+    <div className="hero">
+    <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSeCTOVeTqW8QtjiEVnnf7Giyd2bzaUB4FnjDQuUNuZGbCPIqg/viewform?embedded=true" width="640" height="574" frameBorder="0" marginHeight="0" marginWidth="0">Loading…</iframe>
+    </div>
     <Footer />
     </div>
   )
