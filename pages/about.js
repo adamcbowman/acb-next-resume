@@ -8,7 +8,7 @@ const about = () => {
     <div className="min-h-screen">
       <Header />
       <div className="bg-base-200">
-        <div className="pt-12">
+        <div className="p-12">
           <h1 className="text-xl font-bold">About this resume</h1>
           <p className="pt-4">
             The purpose of this resume is to demonstrate the use of the{" "}
