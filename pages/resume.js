@@ -1,5 +1,7 @@
 import React from "react";
 import { useState, useEffect } from "react";
+import Link from "next/link";
+import Image from "next/image";
 import Header from "../components/header";
 import Footer from "../components/footer";
 
@@ -23,30 +25,41 @@ const Resume = () => {
       <div className="text-center">
         {!resume && (
           <div className="m-12">
-             <h1>Loading...</h1>
+            <h1>Fetching data...</h1>
           </div>
         )}
-        
+
         {resume && (
           <>
+            <div className="hero bg-base-200 pt-6">
+              <div className="hero-content text-center">
+                <div className="max-w-md">
+                  <div className="avatar p-6">
+                    <div className="w-24 rounded">
+                      <Image
+                        src={resume.basics.image}
+                        alt="selfie"
+                        layout="fill"
+                        className="rounded rounded-full"
+                      />
+                    </div>
+                  </div>
+                  <h1 className="text-5xl font-bold">{resume.basics.name}</h1>
 
-            <div className="row p-8 border">
-              <div className="col-md-12">
-                <h1 className="text-3xl font-bold">{resume.basics.name}</h1>
-                <p>
-                  <p>{resume.basics.email}</p>
-                </p>
-              </div>
-            </div>
-            <div className="row p-6 border">
-              <div className="col-md-12">
-                <p>{resume.basics.summary}</p>
+                  <h2 className="py-2">{resume.basics.email}</h2>
+                  <p className="pt-4 font-semibold">{resume.basics.summary}</p>
+                  <Link href="/contact">
+                    <button className="btn btn-primary mt-6">Contact</button>
+                  </Link>
+                </div>
               </div>
             </div>
 
             <div className="row pt-6 border">
               <div className="col-md-12">
-                <h2 className="text-xl font-semibold underline">Work Experience</h2>
+                <h2 className="text-xl font-semibold underline">
+                  Work Experience
+                </h2>
                 {resume.work.map((work, index) => (
                   <div key={index} className="p-4">
                     <h3 className="text-xl font-semibold">{work.company}</h3>
@@ -59,7 +72,7 @@ const Resume = () => {
                 ))}
               </div>
             </div>
-        
+
             <div className="row pt-6 border">
               <div className="col-md-12">
                 <h2 className="text-xl font-semibold underline">Skills</h2>
@@ -77,10 +90,14 @@ const Resume = () => {
 
             <div className="row pt-6 border">
               <div className="col-md-12">
-                <h2 className="text-xl font-semibold underline">Volunteer Experience</h2>
+                <h2 className="text-xl font-semibold underline">
+                  Volunteer Experience
+                </h2>
                 {resume.volunteer.map((volunteer, index) => (
                   <div key={index} className="p-4">
-                    <h3 className="text-xl font-semibold">{volunteer.organization}</h3>
+                    <h3 className="text-xl font-semibold">
+                      {volunteer.organization}
+                    </h3>
                     <p>{volunteer.position}</p>
                     <p>
                       {volunteer.startDate} - {volunteer.endDate}
