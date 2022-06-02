@@ -67,12 +67,12 @@ const about = () => {
           <h2 className="text-xl font-bold mt-4" >API Information</h2>
           <p className="pt-4">
             
-            <button className="m-2"><code><Link href="/api/resume">GET /api/resume</Link></code> </button>returns the JSON resume file. 
+            <button className="m-2 hover:bg-primary"><code><Link href="/api/resume">GET /api/resume</Link></code> </button>returns the JSON resume file. 
             
             <br />
-            <button className="m-2"><code><Link href="/api/resume/skills">GET /api/resume/skills</Link></code></button> returns the skills section.{" "}
+            <button className="m-2 hover:bg-primary"><code><Link href="/api/resume/skills">GET /api/resume/skills</Link></code></button> returns the skills section.{" "}
             <br />
-            <button className="m-2"><code><Link href="/api/resume/info">GET to /api/resume/info</Link></code></button> returns the header section.{" "}
+            <button className="m-2 hover:bg-primary"><code><Link href="/api/resume/info">GET to /api/resume/info</Link></code></button> returns the header section.{" "}
             <br />
           </p>
         </div>

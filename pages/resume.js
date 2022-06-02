@@ -40,7 +40,7 @@ const Resume = () => {
                         src={resume.basics.image}
                         alt="selfie"
                         layout="fill"
-                        className="rounded rounded-full"
+                        className="rounded-full"
                       />
                     </div>
                   </div>
@@ -56,10 +56,10 @@ const Resume = () => {
               </div>
             </div>
 
-            <div className="bg-white shadow overflow-hidden sm:rounded-lg w-full items-center p-6">
+            <div className="bg-base shadow overflow-hidden sm:rounded-lg w-full items-center p-6">
               <div className="px-3 py-3 sm:px-6">
                 <div className="mt-3 text-center">
-                  <h3 className="text-lg leading-6 font-semibold text-gray-900">
+                  <h3 className="text-lg leading-6 font-semibold ">
                     Work Experience
                   </h3>
                 </div>
@@ -69,24 +69,24 @@ const Resume = () => {
                   <>
                     <div className="border border-gray-200 md:w-1/2 m-6 rounded-lg">
                       <dl>
-                        <div className="bg-gray-50 px-2 py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
+                        <div className="bg-base-100 px-2 py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
                           <dt className="text-sm font-medium text-gray-500">
                             Company
                           </dt>
-                          <dd className="mt-1 text-sm text-gray-900 sm:mt-0 sm:col-span-2">
+                          <dd className="mt-1 text-sm  sm:mt-0 sm:col-span-2">
                             {work.company}
                           </dd>
                         </div>
-                        <div className="bg-white px-2 py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
+                        <div className="bg-base-200 px-2 py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
                           <dt className="text-sm font-medium text-gray-500">
                             position
                           </dt>
-                          <dd className="mt-1 text-sm text-gray-900 sm:mt-0 sm:col-span-2">
+                          <dd className="mt-1 text-sm  sm:mt-0 sm:col-span-2">
                             {work.position} <br />
                             {work.startDate} - {work.endDate}
                           </dd>
                         </div>
-                        <div className="bg-gray-50 px-2 py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
+                        <div className="bg-base-100 px-2 py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
                           <dt className="text-sm font-medium text-gray-500">
                             website
                           </dt>
@@ -101,11 +101,11 @@ const Resume = () => {
                           </dd>
                         </div>
 
-                        <div className="bg-white px-4 py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
+                        <div className="bg-base-200 px-4 py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
                           <dt className="text-sm font-medium text-gray-500">
                             About
                           </dt>
-                          <dd className="mt-1 text-sm text-gray-900 sm:mt-0 sm:col-span-2 text-left">
+                          <dd className="mt-1 text-sm sm:mt-0 sm:col-span-2 text-left">
                             {work.summary}
                           </dd>
                         </div>
@@ -118,7 +118,7 @@ const Resume = () => {
 
             <div className="bg-base-200 shadow overflow-hidden sm:rounded-lg w-screen flex flex-col items-center">
               <div className="mt-3 text-center">
-                <h3 className="text-lg leading-6 font-semibold text-gray-900">
+                <h3 className="text-lg leading-6 font-semibold ">
                   Skills
                 </h3>
               </div>
@@ -141,7 +141,7 @@ const Resume = () => {
 
             <div className="flex flex-col w-full border-opacity-50">
               <div className="m-6 text-center">
-                <h3 className="text-lg leading-6 font-semibold text-gray-900">
+                <h3 className="text-lg leading-6 font-semibold ">
                   Volunteer Experience
                 </h3>
               </div>
